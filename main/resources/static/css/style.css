@@ -1,0 +1,111 @@
+/* :root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: orange;
+    --icons-color: rgb(152, 187, 201);
+    --bodybackground-color: lightgray;
+} */
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: 'STIX Two Math';
+  color:black;
+
+}
+div{
+    display:block;
+}
+#wrap{
+    min-width:1190px;
+
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+#container {
+    width:1130px;
+    padding: 20px 30px;
+    position:relative;
+    height:80vh;
+    margin:0 auto;
+}
+
+#container .show-list{
+    margin:0 auto;
+}
+
+#container .left-container{
+    float:left;
+    width:700px;
+}
+
+#container .right-container{
+    float:right;
+    width:350px;
+    height:648.793px;
+}
+
+
+.navbar{
+    background-color:#c0e2e9 !important;
+}
+
+th, tr{
+    vertical-align:middle;
+    text-align:center;
+}
+
+.table{
+    margin-top:100px !important;
+}
+
+#btn-container{
+    width:400px;
+    margin-top:20px;
+    text-align:center;
+}
+
+
+#container .submit-btn{
+    width:80px;
+    height:40px;
+}
+
+#table-container{
+    float:left;
+    width:700px;
+}
+
+#table-container table , #show-list table {
+    border: solid 1px green;
+    float:left;
+    width:700px;
+}
+
+#table-container table th, #show-list table th {
+    background-color:white;
+    border: solid 1px black;
+    text-align:center;
+    padding:10 10 10 10
+}
+
+#table-container table td, #show-list table td{
+    background-color:white;
+    border: solid 1px black;
+    color:black;
+    text-align:center;
+    padding:5   5   5   5;
+    word-break:break-all;
+}
+#table-container .btn{
+    margin-top:50px;
+}
+
+
+#footer{
+    width: 1130px;
+    margin:0 auto;
+}

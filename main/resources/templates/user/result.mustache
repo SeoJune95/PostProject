@@ -1,0 +1,13 @@
+<!--nav-->
+{{>layouts/nav}}    {{!무한루프가 돌수있으니 조심해서 사용하세용}}
+<!--content-->
+<div id="container">
+    <p class="fs-1">회원가입이 완료되었습니다!!</p>
+    {{#user}}
+    <p class="fs-1">반갑습니다 {{userName}}님!</p>
+    <p class="fs-1">계속하시려면 로그인을 해주세요!</p>
+    {{/user}}
+    <a class="btn btn-primary" href="http://211.197.160.246:8081/user/login" role="button">로그인</a>
+</div>
+<!--footer-->
+{{>layouts/footer}}

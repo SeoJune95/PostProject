@@ -1,0 +1,47 @@
+{{>layouts/nav}}
+
+<div id="container">
+    <div class="left-container">
+        <p class="fs-1">회원가입</p>
+        <div>
+            <form class="form-container" method="post" action="/user/create">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">이름</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="userName" name="userName" style="width:150px;">
+                        <label for="floatingInputGroup1">Username</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">아이디</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="id" name="userId" style="width:150px;">
+                        <label for="floatingInputGroup1">id</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">비밀번호</span>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingInputGroup1" placeholder="password" name="userPassword" style="width:200px;">
+                        <label for="floatingInputGroup1">password</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">이메일</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="e-mail" name="userEmail" style="width:200px;">
+                        <label for="floatingInputGroup1">e-mail</label>
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button class="btn btn-primary" type="submit">확인</button>
+                </div>
+                <div>
+                    <p class="fs-1">중복된 id 또는 이름, 아이디, 비밀번호는 공백일 수 없습니다.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{>layouts/footer}}

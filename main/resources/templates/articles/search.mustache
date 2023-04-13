@@ -1,0 +1,24 @@
+    <!--nav-->
+    {{>layouts/nav}}
+    <!--content-->
+    <div id="container">
+        <h1>게시판 목록</h1>
+        <table class="table table-white table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th style="width:100px">번호</th>
+                    <th style="width:300px">제목</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#article}}
+                <tr>
+                    <td><a href="http://211.197.160.246:8081/articles/{{id}}">{{id}}</a></td>
+                    <td><a href="http://211.197.160.246:8081/articles/{{id}}">{{title}}</td>
+                </tr>
+                {{/article}}
+            </tbody>
+        </table>
+    </div>
+    <!--footer-->
+    {{>layouts/footer}}

@@ -1,0 +1,27 @@
+    <!--nav-->
+    {{>layouts/nav}}    {{!무한루프가 돌수있으니 조심해서 사용하세용}}
+    <!--content-->
+    <div id="container">
+        <p class="fs-1">회원가입이 완료되었습니다!!</p>
+        <table class="table table-dark table-hover table-bordered">
+            <thead>
+            <tr>
+                <th scope="col" style="width:102px">번호</th>
+                <th scope="col" style="width:300px">제목</th>
+                <th scope="col">내용</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#article}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{title}}</td>
+                    <td>{{content}}</td>
+                </tr>
+            {{/article}}
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="http://211.197.160.246:8081/articles/list" role="button">돌아가기</a>
+    </div>
+    <!--footer-->
+    {{>layouts/footer}}

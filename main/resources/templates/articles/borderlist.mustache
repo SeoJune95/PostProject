@@ -1,0 +1,24 @@
+    <!--nav-->
+    {{>layouts/nav}}
+    <!--content-->
+    <div id="container">
+        <p class="fs-1">게시판 목록</p>
+        <table class="table table-white table-hover table-bordered">
+            <thead>
+            <tr>
+                <th scope="col" style="width:10px">번호</th>
+                <th scope="col" style="width:300px">제목</th>
+            </tr>
+            </thead>
+            <tbody>
+            <div>
+            {{#list}}
+                {{> articles/borderlistlayouts}}
+            {{/list}}
+            </div>
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="http://211.197.160.246:8081/articles/new" role="button" style="margin-bottom:50px;">게시글 등록</a>
+        <!--    footer-->
+        {{>layouts/footer}}
+    </div>

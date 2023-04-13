@@ -1,0 +1,14 @@
+{{>layouts/nav}}    {{!무한루프가 돌수있으니 조심해서 사용하세용}}
+<!--content-->
+<div id="container">
+    <div class="left-container">
+        <p class="fs-1">안녕하세요!</p>
+        <div>
+            {{#user}}
+                {{userName}}
+            {{/user}}
+        </div>
+    </div>
+    {{>layouts/rightcontainer-login}}
+    <!--footer-->
+{{>layouts/footer}}

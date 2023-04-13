@@ -1,0 +1,31 @@
+
+    <!--nav-->
+    {{>layouts/nav}}
+    <!--content-->
+    <div id="container">
+        <div class="left-container">
+            <p class="fs-1">게시판 수정</p>
+            <div>
+                {{#article}}
+                <form class="form-container" method="post" action="/articles/update-article">
+                    <div class="updateDefault">
+                        <input name="id" value="{{id}}" type="hidden"></input>
+                    </div>
+                    <div class="updateDefault">
+                        <input class="form-control" placeholder="제목을 입력해 주세요."  style="height: 60px; margin-top:40px; width:400px;" name="title" value="{{title}}"></input>
+                    </div>
+                    <div class="updateDefault">
+                        <textarea class="form-control" placeholder="Leave a comment here"  name="content" style="height: 400px; margin-top:15px; width:400px;">{{content}}</textarea>
+                    </div>
+                    <div id="btn-container">
+                        <button class="btn btn-primary" type="submit">저장</button>
+                    </div>
+                    <div id="btn-container">
+                        <a class="btn btn-primary" href="http://211.197.160.246:8081/articles/detail/{{id}}" role="button">돌아가기</a>
+                    </div>
+                </form>
+                {{/article}}
+            </div>
+        </div>
+        <!--footer-->
+        {{>layouts/footer}}

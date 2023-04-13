@@ -1,0 +1,30 @@
+{{>layouts/nav}}
+
+<div id="container">
+    <div class="left-container">
+        <p class="fs-1">로그인후 이용하실 수 있습니다 로그인을 해주세요! :)</p>
+        <div>
+            <form class="form-container" method="post" action="/user/login">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">아이디</span>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="id" name="userId" style="width:150px;">
+                        <label for="floatingInputGroup1">id</label>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">비밀번호</span>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingInputGroup1" placeholder="password" name="userPassword" style="width:200px;">
+                        <label for="floatingInputGroup1">password</label>
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button class="btn btn-primary" type="submit">확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{>layouts/footer}}

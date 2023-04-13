@@ -1,0 +1,28 @@
+    <!--nav-->
+    {{>layouts/nav}}
+    <!--content-->
+        <div id="container">
+            <div class="left-container">
+                <p class="fs-1">게시판 등록</p>
+                <div>
+                    <form class="form-container" method="post" action="/articles/create">
+                        <div class="form-floating">
+                            {{#user}}
+                            <input class="form-control"type="hidden" name="editorName" value="{{userName}}"></input>
+                            {{/user}}
+                            <input class="form-control" placeholder="제목을 입력해 주세요." id="floatingTextarea2" style="height: 60px; margin-top:40px; width:400px;" name="title"></input>
+                            <label for="floatingTextarea2" style="color:black;">제목을 입력해 주세요.</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="content" style="height: 400px; margin-top:15px; width:400px;"></textarea>
+                            <label for="floatingTextarea2" style="color:black;">내용을 작성해 주세요.</label>
+                        </div>
+                        <div id="btn-container">
+                            <button class="btn btn-primary" type="submit">확인</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {{>layouts/rightcontainer}}
+    <!--footer-->
+    {{>layouts/footer}}

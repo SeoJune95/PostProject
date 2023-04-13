@@ -1,0 +1,54 @@
+    <!--nav-->
+    {{>layouts/nav}}    {{!무한루프가 돌수있으니 조심해서 사용하세용}}
+    <!--content-->
+    <div id="container">
+        <p class="fs-1">게시글 상세보기</p>
+        <table class="table table-white table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" style="width:102px">번호</th>
+                    <th scope="col" style="width:300px">제목</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">작성자</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#article}}
+                <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{title}}</td>
+                        <td>{{content}}</td>
+                        <td>{{editorName}}</td>
+                </tr>
+                {{/article}}
+            </tbody>
+        </table>
+        <a class="btn btn-primary" href="http://211.197.160.246:8081/articles/list" role="button">게시글 목록으로 돌아가기</a>
+        {{#isSameUser}}
+            <a class="btn btn-primary" href="http://211.197.160.246:8081/articles/update-form/{{article.id}}" role="button">수정</a>
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">삭제</a>
+        {{/isSameUser}}
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:black">알림!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="color:black">
+                        삭제가 완료되었습니다!
+                    </div>
+                    <div class="modal-footer">
+                        <a href="http://211.197.160.246:8081/articles/delete/{{article.id}}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">확인</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>comments/_comments}}
+        <!--footer-->
+        {{>layouts/footer}}
+    </div>
+
+
+

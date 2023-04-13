@@ -1,0 +1,130 @@
+:root{
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: orange;
+    --icons-color: rgb(152, 187, 201);
+    --bodybackground-color: lightgray;
+}
+
+body {
+  background-color: gray;
+  margin: 0;
+  font-family: 'STIX Two Math';
+}
+div{
+    display:block;
+}
+#wrap{
+    min-width:1190px;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 8px 12px;
+  font-family: 'STIX Two Math';
+}
+
+.nav_logo i {
+  color: black;
+  padding-left: 0;
+}
+
+.nav_menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+}
+
+.nav_menu li {
+  padding: 8px 30px;
+}
+
+#container {
+    width:1130px;
+    padding: 20px 30px;
+    position:relative;
+    height:80vh;
+    margin:0 auto;
+}
+
+
+#container .left-container{
+    float:left;
+    width:750px;
+}
+
+#container .right-container{
+    float:right;
+    width:350px;
+}
+
+.input-title, .input-content, .btn-container{
+
+}
+
+.form-container label{
+    float:left;
+    font-size:23px;
+}
+
+#container .input-title{
+    width:400px;
+    height:35px;
+    margin-bottom:30px;
+    margin-left:15px;
+}
+
+#container .input-content{
+    width:400px;
+    height:300px;
+    margin-left:15px;
+}
+
+#btn-container{
+    width:72%;
+    margin-top:20px;
+    text-align:center;
+}
+
+
+#container .submit-btn{
+    width:80px;
+    height:40px;
+}
+
+#table-container{
+    width:1130px;
+    padding: 20px 30px;
+    position:relative;
+    height:80vh;
+    margin:0 auto;
+    text-align:center;
+}
+#table-container table{
+    border: solid 1px white;
+}
+#table-container table th{
+    background-color:white;
+    text-align:center;
+    padding:10 10 10 10
+}
+
+#table-container table td{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5   5   5   5;
+    word-break:break-all;
+}
+
+#footer{
+    padding:20px 20px;
+}
